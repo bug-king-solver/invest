@@ -31,12 +31,9 @@
          </b-row>
        </div>
 
-       <b-navbar-nav class="mr-auto ml-0">
+       <b-navbar-nav class="mr-0">
          <b-nav-item to="/login">
-          <span class="btn-inner--icon">
-                <i class="fas fa-shopping-cart mr-2"></i>
-              </span>
-             <span class="nav-link-inner--text">Login</span>
+          <span class="nav-link-inner--text">Login</span>
          </b-nav-item>
        </b-navbar-nav>
      </template>
