@@ -16,8 +16,8 @@ const Icons = () => import(/* webpackChunkName: "components" */ '@/views/Compone
 const Typography = () => import(/* webpackChunkName: "components" */ '@/views/Components/Typography.vue');
 
 // Dashboard pages
-const Dashboard = () => import(/* webpackChunkName: "dashboard" */ '@/views/Dashboard/Dashboard.vue');
-const AlternativeDashboard = () => import(/* webpackChunkName: "dashboard" */ '@/views/Dashboard/AlternativeDashboard.vue');
+// const Dashboard = () => import(/* webpackChunkName: "dashboard" */ '@/views/Dashboard/Dashboard.vue');
+// const AlternativeDashboard = () => import(/* webpackChunkName: "dashboard" */ '@/views/Dashboard/AlternativeDashboard.vue');
 
 
 // Forms pages
@@ -30,8 +30,8 @@ const FormValidation = () => import(/* webpackChunkName: "forms" */ '@/views/For
 
 // Pages
 const User = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/UserProfile.vue');
-const Pricing = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/Pricing.vue');
-const TimeLine = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/TimeLinePage.vue');
+// const Pricing = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/Pricing.vue');
+// const TimeLine = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/TimeLinePage.vue');
 const Login = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/Login.vue');
 const Home = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/Home.vue');
 const Register = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/Register.vue');
@@ -106,7 +106,7 @@ let formsMenu = {
 let tablesMenu = {
   path: '/tables',
   component: DashboardLayout,
-  redirect: '/table/regular',
+  redirect: '/table',
   name: 'Tables menu',
   children: [
     
@@ -125,24 +125,24 @@ let tablesMenu = {
 
 
 
-let pagesMenu = {
-  path: '/pages',
-  component: DashboardLayout,
-  name: 'Pages',
-  redirect: '/pages/user',
-  children: [
-    {
-      path: 'user',
-      name: 'User Page',
-      component: User
-    },
-    {
-      path: 'timeline',
-      name: 'Timeline Page',
-      component: TimeLine
-    }
-  ]
-};
+  let pagesMenu = {
+    path: '/pages',
+    component: DashboardLayout,
+    name: 'Pages',
+    redirect: '/pages/user',
+    children: [
+      {
+        path: 'user',
+        name: 'User Page',
+        component: User
+      },
+      // {
+        // path: 'timeline',
+        // name: 'Timeline Page',
+        // component: TimeLine
+      // }
+    ]
+  };
 
 let authPages = {
   path: '/',
@@ -167,11 +167,11 @@ let authPages = {
       name: 'Register',
       component: Register
     },
-    {
-      path: '/pricing',
-      name: 'Pricing',
-      component: Pricing
-    },
+    // {
+      // path: '/pricing',
+      // name: 'Pricing',
+      // component: Pricing
+    // },
     {
       path: '/lock',
       name: 'Lock',
@@ -185,36 +185,35 @@ const routes = [
   {
     path: '/',
     redirect: '/home',
-    name: 'Home'
   },
   componentsMenu,
   formsMenu,
   tablesMenu,
   pagesMenu,
-  {
-    path: '/',
-    component: DashboardLayout,
-    redirect: '/dashboard',
-    name: 'Dashboard layout',
-    children: [
-      {
-        path: 'dashboard',
-        name: 'Dashboard',
-        component: Dashboard
-      },
-      {
-        path: 'alternative',
-        name: 'Alternative',
-        component: AlternativeDashboard,
-        meta: {
-          navbarType: 'light'
-        }
-      },
+  // {
+  //   path: '/',
+  //   component: DashboardLayout,
+  //   redirect: '/dashboard',
+  //   name: 'Dashboard layout',
+  //   children: [
+  //     {
+  //       path: 'dashboard',
+  //       name: 'Dashboard',
+  //       component: Dashboard
+  //     },
+  //     {
+  //       path: 'alternative',
+  //       name: 'Alternative',
+  //       component: AlternativeDashboard,
+  //       meta: {
+  //         navbarType: 'light'
+  //       }
+  //     },
      
       
       
-    ]
-  },
+  //   ]
+  // },
   authPages,
 ];
 
