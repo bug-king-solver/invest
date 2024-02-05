@@ -9,7 +9,8 @@
           </nav>
         </b-col>
         <b-col lg="6" cols="5" class="text-right">
-          <base-button size="sm" type="neutral">New</base-button>
+          <base-button class="btn-link" size="sm" type="neutral">
+            <router-link to="/forms/elements">Create</router-link></base-button>
           <base-button size="sm" type="neutral">Filters</base-button>
         </b-col>
       </b-row>
@@ -124,6 +125,7 @@ import { BasePagination } from '@/components';
 import clientPaginationMixin from './PaginatedTables/clientPaginationMixin'
 import swal from 'sweetalert2';
 import users from './users2';
+import VueRouter from 'vue-router';
 
 export default {
   mixins: [clientPaginationMixin],

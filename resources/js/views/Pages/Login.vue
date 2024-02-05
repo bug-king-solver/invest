@@ -50,7 +50,8 @@
 
                   <b-form-checkbox v-model="model.rememberMe">Remember me</b-form-checkbox>
                   <div class="text-center">
-                    <base-button type="primary" native-type="submit" class="my-4">Sign in</base-button>
+                    <base-button type="primary" native-type="submit" class="my-4">
+                       <router-link to="/dashboard">Sign in</router-link></base-button>
                   </div>
                 </b-form>
               </validation-observer>
@@ -68,6 +69,8 @@
   </div>
 </template>
 <script>
+
+import VueRouter from 'vue-router';
   export default {
     data() {
       return {
