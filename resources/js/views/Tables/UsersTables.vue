@@ -11,7 +11,9 @@
         <b-col lg="6" cols="5" class="text-right">
           <base-button class="btn-link" size="sm" type="neutral">
             <router-link to="/forms/elements">Create</router-link></base-button>
-          <base-button size="sm" type="neutral">Filters</base-button>
+          <base-button size="sm" type="neutral">
+           <user-data-uploader />
+        </base-button>
         </b-col>
       </b-row>
     </base-header>
@@ -126,16 +128,19 @@ import clientPaginationMixin from './PaginatedTables/clientPaginationMixin'
 import swal from 'sweetalert2';
 import users from './users2';
 import VueRouter from 'vue-router';
+import UserDataUploader from '@/views/Components/UserDataUploader';
 
 export default {
   mixins: [clientPaginationMixin],
   components: {
     BasePagination,
     RouteBreadCrumb,
+    UserDataUploader,
     [Select.name]: Select,
     [Option.name]: Option,
     [Table.name]: Table,
-    [TableColumn.name]: TableColumn
+    [TableColumn.name]: TableColumn,
+    
   },
   data() {
     return {

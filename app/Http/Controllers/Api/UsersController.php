@@ -151,4 +151,10 @@ class UsersController extends Controller
 
         return response()->json($response);
     }
+
+    public function ImportUsersFromExcel(Request $request) {
+        $file = $request->input('file');
+
+            
+    }   
 }

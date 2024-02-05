@@ -58,4 +58,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
             Route::post('check-password', [UsersController::class, 'checkPassword']);
         }
     );
+
+    Route::prefix('user')->group(
+        function () {
+            Route::post('import-excel', [UsersController::class, 'importUsersFromExcel'])->name('users.importUsersFromExcel')
+        }
+    );
 });
